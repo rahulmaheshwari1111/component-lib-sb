@@ -1,0 +1,145 @@
+@mixin clearfix {
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+  
+  @mixin pageBackground {
+    background: $clr-neutral-100;
+    padding: calculateRem(25) calculateRem(26);
+    border-radius: calculateRem(8);
+  }
+  
+  @mixin fontSize($size) {
+    font-size: #{$size}px; // fall back px value
+    font-size: calculateRem($size);
+  }
+  
+  @mixin hoverEffect {
+    transition: all 0.2s;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 calculateRem(13) rgba($clr-neutral-600, 0.27);
+  }
+  
+  @mixin truncateText($width, $text-overflow: ellipsis) {
+    width: $width;
+    text-overflow: $text-overflow;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  @mixin flexBox($justify-content) {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: $justify-content;
+  }
+  
+  @mixin profile-pic($bgColor) {
+    height: calculateRem(36);
+    width: calculateRem(36);
+    margin-right: calculateRem(12);
+    background-color: $clr-amber-200;
+    border-radius: 200rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img {
+      width: 100%;
+      height: auto;
+    }
+  
+    span {
+      color: $clr-neutral-100;
+      font-weight: 400;
+      @include fontSize(16);
+    }
+  }
+  
+  @mixin icon($bgColor,$root) {
+    display: flex;
+    cursor: pointer;
+      &__#{$root}{
+        padding-top: calculateRem(13);
+        color:$bgColor;
+      }
+    
+  }
+  /*
+  MEDIA QUERY MANAGER
+      
+    $breakpoint arguement choices:
+      small:    up to 479px [MOBILE] [TOUCH]
+      medium:   480px - 639px [MOBILE] [TOUCH] 
+  
+      mobile:   up to 639px
+  
+      large:    640px - 1023px [TOUCH]
+      
+      touch:    up to 1023px
+  
+      x-large:  1024px - 1365px
+      big:      1366px - 1919px
+      huge:     1920px and up
+  */
+  
+  @mixin respond($breakpoint) {
+    @if $breakpoint ==small {
+      @media screen and (max-width: 479px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint ==medium {
+      @media screen and (min-width: 480px) and (max-width: 639px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint ==mobile {
+      @media screen and (max-width: 639px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint ==desktop {
+      @media screen and (min-width: 640px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint ==large {
+      @media screen and (min-width: 640px) and (max-width: 1023px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint ==touch {
+      @media screen and (max-width: 1023px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint ==x-large {
+      @media screen and (min-width: 1024px) and (max-width: 1365px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint ==big {
+      @media screen and (min-width: 1366px) and (max-width: 1919px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint ==huge {
+      @media screen and (min-width: 1920px) {
+        @content;
+      }
+    }
+  }
+  

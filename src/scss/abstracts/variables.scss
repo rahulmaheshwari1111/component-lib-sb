@@ -1,0 +1,109 @@
+// --- Font-Family (ff)
+$ff-primary: 'Roboto', sans-serif;
+$ff-secondary: 'Poppins', sans-serif;
+
+// COLORS (clr)
+// Universal
+
+$clr-amber-100: #ffb91d;
+$clr-amber-200: #ea9c31;
+
+// Custom
+$clr-primary-100: #00a8ae;
+$clr-primary-300: #007a86;
+$clr-primary-400: #00636d;
+$clr-primary-500: #007a86;
+$clr-primary-600: #007a86;
+$clr-primary-900: #ecf7f8;
+
+$clr-secondary-100: #00636d;
+$clr-secondary-300: #00636d;
+$clr-secondary-400: #0c1d48;
+$clr-secondary-500: #121814;
+
+$clr-neutral-100: #ffffff;
+$clr-neutral-150: #f5f5f5;
+$clr-neutral-200: #f4f5f7;
+$clr-neutral-250: #f2f2f2;
+$clr-neutral-275: #f0f0f0;
+
+$clr-neutral-300: #e1e1e1;
+$clr-neutral-350: #d3d3d3;
+$clr-neutral-375: #bababa;
+$clr-neutral-400: #a4a4a4;
+$clr-neutral-425: #63666a;
+$clr-neutral-450: #4e2d2d;
+$clr-neutral-475:#1E2222;
+$clr-neutral-500: #1d1b1b; // FIXME: should be a higher number
+$clr-neutral-550: #676767;
+$clr-neutral-600: #424857;
+$clr-neutral-700: #212121;
+$clr-neutral-750: #222222;
+$clr-neutral-900: #000000;
+$clr-neutral-950: #5d5d5d;
+
+$clr-success-100: #3dcc24;
+$clr-success-200: #179001;
+$clr-success-300: #106601;
+$clr-success-400: #16a22a;
+$clr-success-500: #06a22a;
+$clr-success-600: #19a500;
+$clr-success-700: #18a522;
+
+$clr-error-25: #ffe0e4;
+$clr-error-100: #ce4762;
+$clr-error-200: #d53900;
+$clr-error-300: #9c1720;
+$clr-error-400: #e30425;
+$clr-error-500: #fc0000;
+$clr-marked-600: #ff0202;
+
+$clr-warning-100: #f0cb5f;
+$clr-warning-200: #ffbf00;
+$clr-warning-300: #c4a000;
+
+$clr-info-50: #ecf7f8;
+$clr-info-100: #baf6ff;
+$clr-info-200: #00a8ae;
+$clr-info-300: #007a86;
+$clr-info-70: #fafafa;
+$clr-info-90: #d9d9d9;
+
+$clr-text: $clr-neutral-600;
+$clr-text-inverted: $clr-neutral-100;
+$clr-background: #fbfbfb;
+$clr-background-100: #f0efef;
+
+$clr-background-300: #ebf7f8;
+$clr-background-400: #f2f4f8; // FIXME
+
+$clr-border: #f4f4f4;
+$clr-border-100: #bebebe;
+$clr-border-300: #c5dee1;
+
+$clr-seperator: #ebf7f8;
+$clr-divider: #c5dee1;
+$clr-shadow: #ebebeb;
+$clr-button-shadow: #007a8621;
+
+$clr-badge-background: #ebf7f8;
+$clr-thead-background: #f7f7f7;
+$clr-toast-background: #ebf7f8;
+$clr-toast-error-background: #ffeded;
+$clr-link-border: #c5dee1;
+$clr-pill-background: #dcffd0;
+$clr-pill: #4ca500;
+$clr-pill-border: #4ca500;
+$clr-logo-background: #8c8c8c;
+$clr-card-background: #e2fce4;
+$clr-link-text: #311ade;
+
+// LAYOUT
+$grid-width: 1280px;
+
+// Z - INDEX;
+
+$z-index-modal: 500;
+$z-index-navbar: 300;
+
+$clr-filter-label: #495555;

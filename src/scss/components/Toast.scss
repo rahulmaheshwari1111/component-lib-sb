@@ -1,0 +1,60 @@
+@import '../abstracts/index';
+
+.toast {
+  width: 100%;
+  min-width: 50vh;
+
+  display: flex;
+  align-items: center;
+  border-color: $clr-neutral-100;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: calculateRem(4);
+  //box-shadow: 0 calculateRem(3) calculateRem(6) rgba($clr-neutral-900, 0.16);
+
+  margin-bottom: calculateRem(10);
+  padding: calculateRem(8) calculateRem(12);
+
+  color: $clr-neutral-100;
+  @include fontSize(14);
+
+  &__icon {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &__content {
+    flex: 1;
+    text-align: center;
+    a{
+      cursor: pointer;
+      text-decoration: underline;
+      color: $clr-link-text;
+    }
+  }
+
+  @mixin toast-color($color) {
+    background: $color;
+  }
+
+  // Colors
+  &--error {
+    @include toast-color($clr-error-400);
+  }
+  &--success {
+    @include toast-color($clr-success-400);
+    border-radius: calculateRem(25)
+  }
+  &--info {
+    @include toast-color($clr-info-300);
+  }
+  &--primary {
+    @include toast-color($clr-primary-300);
+  }
+  &--basic {
+    @include toast-color($clr-neutral-600);
+  }
+  &--warning {
+    @include toast-color($clr-warning-200);
+  }
+}

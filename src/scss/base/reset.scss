@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-size: 62.5%; // 1 rem = 10px, 10px/16px = 62.5%
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+// FRESH CHAT STYLES
+// https://crmsupport.freshworks.com/support/solutions/articles/50000002540-how-can-i-change-the-position-of-the-chat-widget-
+
+@include respond(mobile) {
+  #fc_frame {
+    bottom: 12vh !important;
+  }
+}

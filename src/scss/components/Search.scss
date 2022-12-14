@@ -1,0 +1,36 @@
+@import "../abstracts/index";
+
+.search {
+  background: none;
+  border: calculateRem(1) solid $clr-neutral-400;
+  border-radius: 5px;
+  color: $clr-neutral-500;
+  display: block;
+  margin-top: 0.25rem;
+  width: calculateRem(400);
+  height: calculateRem(44);
+
+  &__input {
+    font-size: 1.5rem;
+    padding: 0 0 calculateRem(4);
+    padding-left: calculateRem(10);
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $clr-neutral-500;
+      opacity: 0.6;
+    }
+  }
+
+  &__icon {
+    height: auto;
+    width: 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+  }
+}

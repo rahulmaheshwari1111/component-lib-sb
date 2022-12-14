@@ -1,0 +1,111 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import '../abstracts/index';
+
+$size-xs: calculateRem(10);
+$size-sm: calculateRem(16);
+$size-md: calculateRem(22);
+$size-lg: calculateRem(30);
+$size-xl: calculateRem(40);
+
+.margin {
+  &-y {
+    &--xs {
+      margin-top: $size-xs;
+      margin-bottom: $size-xs;
+    }
+    &--xl {
+      margin-top: $size-xl;
+      margin-bottom: $size-xl;
+    }
+  }
+
+  &-t {
+    &--xs {
+      margin-top: $size-xs;
+    }
+  }
+
+  &-b {
+    &--xs {
+      margin-bottom: $size-xs;
+    }
+
+    &--sm {
+      margin-bottom: $size-sm;
+    }
+
+    &--lg {
+      margin-bottom: $size-lg;
+    }
+  }
+}
+
+.padding {
+  &-xy {
+    &--xs {
+      padding: $size-xs;
+    }
+
+    &--lg {
+      padding: $size-lg;
+    }
+
+    &--xl {
+      padding: $size-xl;
+    }
+  }
+}
+
+.is-text {
+  &-center {
+    text-align: center;
+  }
+}
+
+.is-error {
+  color: $clr-error-200;
+}
+
+.is-primary {
+  color: $clr-primary-300;
+}
+
+.is-success {
+  color: $clr-success-200;
+}
+
+.is-cursor {
+  &-pointer {
+    cursor: pointer;
+  }
+}
+
+.has-text {
+  &-centered {
+    text-align: center;
+  }
+}
+
+.has-shadow {
+  //    CHECKME: is this class needed or can this rule be defined at individual component level?
+  box-shadow: 0 -8px 7px $clr-button-shadow;
+}
+
+// RESPONSIVE HELPERS - These are meant to contain util classes specifically available between certain breakpoints
+
+//  !! WARNING: PLEASE DO NOT MAKE REDUNDANT UTIL CLASSES WITH `!important` FOR THE SAKE OF OVERRIDING SPECIFICITY !!
+// `!important` SHOULD ONLY BE USED IN UTILITY CLASSES.
+
+@include respond(mobile) {
+  .is-hidden-mobile {
+    // hides component UPTO mobile breakpoint (639px)
+    display: none !important;
+  }
+}
+
+@include respond(desktop) {
+  .is-hidden-desktop {
+    // hides component FROM desktop breakpoint (640px)
+    display: none !important;
+  }
+}
