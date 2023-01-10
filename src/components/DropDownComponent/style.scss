@@ -1,0 +1,41 @@
+@import '../../scss/abstracts/index';
+
+.dropdownComponent {
+  display: block;
+  position: relative;
+  margin-top: calculateRem(6);
+
+  &--disabled {
+    opacity: 0.7;
+  }
+
+  &__container {
+    z-index: 2;
+    width: 100%;
+    min-height: calculateRem(44);
+    height: auto;
+    background-color: $clr-neutral-100;
+    cursor:pointer;
+
+    &--open {
+      position: relative;
+    }
+  }
+}
+.list {
+  min-height: calculateRem(29);
+
+  .searchFieldContainer {
+    height: calculateRem(29);
+    cursor: inherit;
+    overflow: hidden;
+    border-radius: calculateRem(2);
+    &__normal-single-select {
+      align-items: baseline;
+      @include fontSize(16);
+      height: calculateRem(30);
+      font-weight: bolder;
+      color: $clr-secondary-500;
+    }
+  }
+}

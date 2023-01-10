@@ -24,10 +24,12 @@
     "@storybook/addon-essentials": "^6.5.14",
     "@storybook/addon-interactions": "^6.5.14",
     "@storybook/addon-links": "^6.5.14",
+    "@storybook/addons": "^6.5.15",
     "@storybook/builder-webpack4": "^6.5.14",
     "@storybook/manager-webpack4": "^6.5.14",
     "@storybook/react": "^6.5.14",
     "@storybook/testing-library": "0.0.13",
+    "@storybook/theming": "^6.5.15",
     "@types/react": "^18.0.26",
     "babel-loader": "^8.3.0",
     "css-loader": "^6.7.2",
@@ -42,12 +44,12 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@mui/material": "^5.10.13",
     "@mui/x-date-pickers": "^5.0.7",
     "date-fns": "^2.20.0",
-    "dayjs": "^1.11.6",
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@fortawesome/react-fontawesome": "^0.1.14"
+    "dayjs": "^1.11.6"
   }
 }

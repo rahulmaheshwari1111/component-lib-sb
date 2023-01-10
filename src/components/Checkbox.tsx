@@ -9,7 +9,7 @@ export interface ICheckBoxButton {
   disabled?: boolean
 }
 
-const classHelper = BEMHelper('checkbox')
+const classHelper:any = BEMHelper('checkbox')
 
 export const CheckBox: React.FC<ICheckBoxButton> = ({
   id,
@@ -53,7 +53,7 @@ export const CheckBox: React.FC<ICheckBoxButton> = ({
           className={classHelper(
             'icon',
             [],
-            `fal ${isChecked ? 'fa-check' : 'fa-plus'}`
+            `fa ${isChecked ? 'fa-check' : 'fa-plus'}`
           )}
         />
       </label>

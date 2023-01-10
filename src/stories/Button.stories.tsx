@@ -12,7 +12,7 @@ const Template: Story<IButtonProps> = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: "Primary",
+  children: "Button Text Here",
   variant: "primary",
 };
 

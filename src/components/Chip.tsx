@@ -35,7 +35,7 @@ export const Chip: React.FC<IChipProps> = ({
       <span>{chipText}</span>
       {iconName ? (
         <span className={classHelper('icon-right', [isActive ? 'active' : ''])}>
-          <i className={`fas ${iconName}`} />
+          <i className={`fa ${iconName}`} />
         </span>
       ) : (
         ''

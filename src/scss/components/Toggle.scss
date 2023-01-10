@@ -1,0 +1,45 @@
+@import "../abstracts/index";
+
+.toggle {
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    display: inline-block;
+    position: relative;
+
+    height: calculateRem(36);
+    width: calculateRem(64);
+
+    background: $clr-neutral-100;
+
+    border-radius: 200rem;
+    border: 2px solid $clr-divider;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: flex-start;
+
+    span {
+      transition: all 0.2s;
+      position: absolute;
+      height: calculateRem(28);
+      width: calculateRem(28);
+      background-color: $clr-primary-300;
+      border-radius: 200rem;
+
+      left: 0;
+      top: 50%;
+
+      transform: translate(calculateRem(5), -50%);
+    }
+
+    &--active {
+      background: $clr-seperator;
+      span {
+        transform: translate(100%, -50%);
+      }
+    }
+  }
+}
