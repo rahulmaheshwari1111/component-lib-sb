@@ -1,0 +1,28 @@
+@import '../../scss/abstracts/index';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.chip {
+  border-radius: calculateRem(50);
+  background-color: $clr-neutral-100;
+  border: calculateRem(2) solid $clr-neutral-400;
+  margin: calculateRem(8) calculateRem(4) calculateRem(0) calculateRem(0);
+  padding: calculateRem(10);
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--active {
+    background: $clr-seperator;
+    border: calculateRem(1) solid $clr-divider;
+  }
+
+  &__icon-right {
+    margin-left: calculateRem(10);
+
+    &--active {
+      color: $clr-primary-300;
+    }
+  }
+}

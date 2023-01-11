@@ -1,0 +1,99 @@
+@import '../../../scss/abstracts/index';
+.searchFieldContainer {
+  display: flex;
+  flex-flow: wrap;
+  overflow-y: auto;
+  width: 100%;
+  align-items: center;
+  border: calculateRem(1) solid $clr-neutral-400;
+  border-radius: calculateRem(5);
+  color: $clr-neutral-500;
+  cursor: text;
+  font-size: calculateRem(20);
+  height: auto;
+
+  &:hover {
+    border: calculateRem(1) solid $clr-primary-300;
+  }
+
+  &--open {
+    outline: solid $clr-primary-300;
+    outline-style: auto;
+  }
+
+  &--disabled {
+    opacity: 0.7;
+
+    &:hover {
+      border: calculateRem(1) solid $clr-neutral-400;
+    }
+
+    &::focus-within {
+      outline: calculateRem(1) solid $clr-neutral-400;
+      border: calculateRem(1) solid $clr-neutral-400;
+    }
+  }
+
+  &--closed {
+    height: calculateRem(40);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &__selected {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  &__search-icon-right,
+  &__caret-icon-right {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+
+    i {
+      align-self: center;
+      position: relative;
+    }
+  }
+
+  &__search-icon-right {
+    padding: calculateRem(20);
+  }
+
+  &__caret-icon-right {
+    padding: calculateRem(11);
+    @include fontSize(16);
+  }
+
+  &__chips {
+    flex: none;
+    align-self: center;
+
+    .chip {
+      margin: calculateRem(2) calculateRem(4);
+    }
+  }
+
+  &__input-field {
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+    height: calculateRem(40) !important;
+
+    .input {
+      height: calculateRem(40);
+    }
+  }
+
+  &__normal-single-select {
+    display: flex;
+    align-items: center;
+    @include fontSize(14);
+    height: calculateRem(38);
+    margin-left: calculateRem(20);
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../scss/abstracts/index';
+
+
+.avatar {
+  min-width: calculateRem(32);
+  min-height: calculateRem(32);
+  display: inline-block;
+  text-align: center;
+  line-height: calculateRem(34);
+  color: $clr-neutral-100;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  position: relative;
+  background: $clr-neutral-750;
+
+  &--image {
+    background: none;
+  }
+
+  &__image {
+    border-radius: 100%;
+    width: calculateRem(62);
+    height: calculateRem(62);
+    vertical-align: middle;
+  }
+
+  &__close {
+    position: absolute;
+    top: -0.5rem;
+    background: $clr-neutral-100;
+    border-radius: 100%;
+    display: inline-flex;
+    padding: calculateRem(3);
+    cursor: pointer;
+
+    .fa-times {
+      background: $clr-neutral-600;
+      height: calculateRem(16);
+      width: calculateRem(16);
+      padding: calculateRem(4);
+      border-radius: 100%;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+
+@import '../../scss/abstracts/index';
+.accordion {
+  border: none;
+  background: none;
+  display: flex;
+  font-size: calculateRem(18);
+  font-weight: bolder;
+  background-color: $clr-info-50;
+  width: 100%;
+
+  &--small {
+    min-width: 30%;
+  }
+
+  &--medium {
+    min-width: 60%;
+  }
+
+  &--large {
+    min-width: 100%;
+  }
+
+  &__icon {
+    margin: auto calculateRem(30);
+
+    &--hidden {
+      display: none !important;
+    }
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__body {
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &:single-button &__icon {
+    transform: rotate(180deg);
+    font-size: larger;
+  }
+
+  &__info {
+    display: flex;
+    font-size: calculateRem(14);
+  }
+
+  &__info div {
+    margin-right: calculateRem(15);
+  }
+
+  &__content {
+    font-size: calculateRem(15);
+  }
+
+  &:hover {
+    background-color: $clr-neutral-100;
+  }
+
+  &--selected {
+    background-color: $clr-neutral-100;
+  }
+}

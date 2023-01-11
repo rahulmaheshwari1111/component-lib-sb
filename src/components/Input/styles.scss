@@ -1,0 +1,68 @@
+@import '../../scss/abstracts/index';
+
+%input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border: calculateRem(1) solid $clr-neutral-400;
+  border-radius: calculateRem(5);
+  margin-top: calculateRem(6);
+  color: $clr-neutral-500;
+  font-size: calculateRem(20);
+  height: calculateRem(44);
+
+  &:hover {
+    border: 1px solid $clr-primary-300;
+  }
+
+  &:focus-within {
+    outline: solid $clr-primary-300;
+    outline-style: auto;
+
+    i {
+      color: $clr-primary-300;
+    }
+  }
+
+  i {
+    padding: calculateRem(12);
+    font-size: calculateRem(20);
+  }
+
+  &::placeholder {
+    color: $clr-neutral-150;
+    opacity: 0.1;
+  }
+}
+
+.input {
+  @extend %input;
+
+  &__icon {
+    font-size: calculateRem(20);
+  }
+
+  &__field {
+    width: 100%;
+    height: calculateRem(42);
+    padding: 0 calculateRem(20);
+    border: none;
+    outline: none;
+    border-radius: calculateRem(5);
+
+    @include fontSize(14);
+  }
+
+  &--invalid {
+    border-bottom-color: $clr-error-100;
+    color: $clr-error-100;
+
+    &::placeholder {
+      color: $clr-error-100;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+  }
+}

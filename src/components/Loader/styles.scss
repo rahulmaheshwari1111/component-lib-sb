@@ -1,0 +1,11 @@
+@import '../../scss/abstracts/index';
+.loader{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  
+    p{
+        margin-top: 1rem
+    }
+  }

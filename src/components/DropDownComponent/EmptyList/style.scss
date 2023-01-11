@@ -1,0 +1,33 @@
+@import '../../../scss/abstracts/index';
+
+.no-content {
+    padding: calculateRem(10) calculateRem(20);
+    color: $clr-neutral-450;
+
+    p {
+        font-weight: bold;
+        padding-bottom: calculateRem(5);
+    }
+
+    ul {
+        padding-left: calculateRem(20);
+    }
+
+    ul li {
+        display: list-item;
+        list-style: disc;
+        border-bottom: none;
+        padding: calculateRem(0) calculateRem(0) calculateRem(0) calculateRem(5);
+    }
+
+    &:hover {
+        outline: none;
+        color: $clr-neutral-200;
+        background-color: $clr-primary-300;
+        * {
+            outline: none;
+            color: $clr-neutral-200;
+            background-color: $clr-primary-300;
+        }
+    }
+}

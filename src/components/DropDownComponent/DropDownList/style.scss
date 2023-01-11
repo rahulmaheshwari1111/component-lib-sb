@@ -1,0 +1,52 @@
+@import '../../../scss/abstracts/index';
+
+.dropDownList {
+  color: $clr-neutral-700;
+  overflow-y: auto;
+  cursor: pointer;
+  border-top-left-radius: 0;
+  background-color: $clr-neutral-100;
+  border-bottom: calculateRem(1) solid $clr-neutral-400;
+  border-left: calculateRem(1) solid $clr-neutral-400;
+  border-right: calculateRem(1) solid $clr-neutral-400;
+  border-bottom-left-radius: calculateRem(4);
+  border-bottom-right-radius: calculateRem(4);
+  max-height: calculateRem(300);
+  position: relative;
+  width: 100%;
+
+  &--open {
+    position: absolute;
+  }
+
+  &--closed {
+    display: none;
+  }
+  &__list-item {
+    i {
+      outline: none;
+      color: $clr-neutral-200;
+      background-color: $clr-primary-300;
+      border-radius: calculateRem(50);
+      padding: calculateRem(2.4) calculateRem(1) calculateRem(0) calculateRem(1);
+    }
+  }
+
+  li {
+    list-style: none;
+    border-bottom: calculateRem(1) solid $clr-neutral-300;
+    padding: calculateRem(10) calculateRem(20);
+    @include fontSize(14);
+
+    &:hover {
+      outline: none;
+      background-color: $clr-neutral-300;
+    }
+  }
+}
+
+.list {
+  width: calculateRem(315);
+  box-shadow: calculateRem(0.4) calculateRem(0.4) calculateRem(6)
+    calculateRem(3) rgba($clr-primary-300, 0.13);
+}
