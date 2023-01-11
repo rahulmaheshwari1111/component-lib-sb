@@ -1,0 +1,27 @@
+@import '../../scss/abstracts/index';
+
+.textarea {
+  display: flex;
+  box-sizing: border-box;
+  font-family: $ff-primary;
+  font-size: 1.4rem;
+  resize: vertical;
+
+  &--invalid {
+    color: $clr-error-300;
+
+    &::placeholder {
+      color: $clr-error-300;
+    }
+  }
+}
+.fullwidth {
+  border-radius: calculateRem(5);
+  color: $clr-neutral-500;
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 0.6rem;
+  padding: calculateRem(17) calculateRem(20);
+  width: 100%;
+  height: calculateRem(120);
+}

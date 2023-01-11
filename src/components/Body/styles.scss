@@ -1,0 +1,52 @@
+@import '../../scss/abstracts/index';
+
+.body {
+  &--is-inline {
+    display: inline;
+  }
+}
+
+.body--clr {
+  &-basic {
+    color:$clr-neutral-900;
+  }
+
+  &-faded {
+    color: $clr-neutral-450;
+  }
+
+  &-primary {
+    color: $clr-primary-300;
+  }
+
+  &-secondary {
+    color: $clr-secondary-300;
+  }
+
+  &-darker {
+    color: $clr-secondary-400;
+  }
+
+  &-error {
+    color: $clr-error-100;
+  }
+
+  &-inverted {
+    color: $clr-text-inverted;
+  }
+}
+
+.body--size {
+  &-large {
+    @include fontSize(20);
+  }
+  &-paragraph {
+    @include fontSize(16);
+  }
+  &-caption {
+    @include fontSize(14);
+  }
+  &-subtext {
+    @include fontSize(12);
+  }
+}

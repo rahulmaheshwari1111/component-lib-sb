@@ -1,4 +1,4 @@
-export const BEMHelper = (block) => (
+export const BEMHelper:any = (block:any) => (
     element = "",
     modifiers = [],
     ...additionalClasses

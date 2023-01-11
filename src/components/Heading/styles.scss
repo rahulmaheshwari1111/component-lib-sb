@@ -1,0 +1,65 @@
+@import '../../scss/abstracts/index';
+
+.heading {
+  font-weight: 700;
+  font-family: $ff-secondary;
+  color: $clr-secondary-500;
+
+  &--h1 {
+    @include fontSize(36);
+  }
+
+  &--h2 {
+    @include fontSize(30);
+  }
+
+  &--h3 {
+    @include fontSize(24);
+  }
+
+  &--h4 {
+    @include fontSize(20);
+  }
+
+  &--h5 {
+    @include fontSize(16);
+  }
+
+  &--h6 {
+    @include fontSize(14);
+  }
+
+  &--normal {
+    font-weight: 400;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--semibold {
+    font-weight: 600;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--inverted {
+    color: $clr-text-inverted;
+  }
+
+  &--neutral {
+    color: $clr-neutral-400;
+  }
+}
+@include respond(mobile) {
+  .heading {
+    &--h1 {
+      @include fontSize(22);
+    }
+    &--h3 {
+      @include fontSize(16);
+    }
+  }
+}
